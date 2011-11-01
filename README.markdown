@@ -3,12 +3,11 @@ TiKeyboardEvents Module for Titanium
 
 This module exposes some useful keyboard events available in iOS, used to notify the application when the keyboard is shown and hidden.
 
-Information about the keyboard notifications can be found in the [Apple UIKit documentation][appledocs].
+The module catches the UIKit keyboard notifications `UIKeyboardWillShowNotification` and `UIKeyboardWillHideNotification`, and fires the as the Titanium events `keyboardWillShow` and `keyboardWillHide`. For the `keyboardWillShow` event, the height of the keyboard is passed along, to allow apps to adjust the view to account for the keyboard.
 
-Currently, the two supported keyboard events are keyboardWillShow and keyboardWillHide, typically used to adjust the size of the current view
-depending on keyboard visibility.
+More information about the iOS keyboard notifications can be found in [Apple's UIKit documentation][appledocs].
 
-General information about Titanium modules can be found in the [Titanium docs][timoduledocs].
+General information about developing and using Titanium modules is found in the [Titanium docs][timoduledocs].
 
 Usage
 -----
@@ -32,12 +31,12 @@ KeyboardEvents = require("no.funkbit.keyboardevents");
 Bind to the events you are interested in:
 
 ```js
-KeyboardEvents.addEventListener("keyboardWillShow", function() {
-    alert("Keyboard will show!");
+KeyboardEvents.addEventListener("keyboardWillShow", function(e) {
+    alert("Keyboard will show, with height=" + e.keyboardHeight);
 });
 
-KeyboardEvents.addEventListener("keyboardWillShow", function() {
-    alert("Keyboard will show!");
+KeyboardEvents.addEventListener("keyboardWillHide", function() {
+    alert("Keyboard will hide");
 });
 ```
 
