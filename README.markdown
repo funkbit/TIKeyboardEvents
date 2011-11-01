@@ -9,6 +9,17 @@ More information about the iOS keyboard notifications can be found in [Apple's U
 
 General information about developing and using Titanium modules is found in the [Titanium docs][timoduledocs].
 
+Building
+--------
+
+1. Open the Xcode project, make changes and build as normal.
+2. Execute `./build.py` to package the module as an archive.
+3. Copy the archive to the Titanium directory to make it available:
+
+```sh
+cp no.funkbit.keyboardevents-iphone-0.1.zip /Library/Application\ Support/Titanium/
+```
+
 Usage
 -----
 
@@ -38,17 +49,6 @@ KeyboardEvents.addEventListener("keyboardWillShow", function(e) {
 KeyboardEvents.addEventListener("keyboardWillHide", function() {
     alert("Keyboard will hide");
 });
-```
-
-Building
---------
-
-1. Open the Xcode project, make changes and build as normal.
-2. Execute `./build.py` to package the module as an archive.
-3. Copy the archive to the Titanium directory to make it available:
-
-```sh
-cp no.funkbit.keyboardevents-iphone-0.1.zip /Library/Application\ Support/Titanium/
 ```
 
 [appledocs]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWindow_Class/UIWindowClassReference/UIWindowClassReference.html
