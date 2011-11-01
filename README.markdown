@@ -3,7 +3,7 @@ TiKeyboardEvents Module for Titanium
 
 This module exposes some useful keyboard events available in iOS, used to notify the application when the keyboard is shown and hidden.
 
-The module catches the UIKit keyboard notifications `UIKeyboardWillShowNotification` and `UIKeyboardWillHideNotification`, and fires the as the Titanium events `keyboardWillShow` and `keyboardWillHide`. For the `keyboardWillShow` event, the height of the keyboard is passed along, to allow apps to adjust the view to account for the keyboard.
+The module catches the UIKit keyboard notifications `UIKeyboardWillShowNotification` and `UIKeyboardWillHideNotification`, and fires these the as the Titanium events `keyboardWillShow` and `keyboardWillHide`. For the `keyboardWillShow` event, the height of the keyboard is passed along to allow apps to adjust the view to account for the keyboard.
 
 More information about the iOS keyboard notifications can be found in [Apple's UIKit documentation][appledocs].
 
