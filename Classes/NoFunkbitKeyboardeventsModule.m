@@ -117,23 +117,4 @@
 	}
 }
 
-#pragma Public APIs
-
--(id)example:(id)args
-{
-	// example method
-	return @"hello world";
-}
-
--(id)exampleProp
-{
-	// example property getter
-	return @"hello world";
-}
-
--(void)exampleProp:(id)value
-{
-	// example property setter
-}
-
 @end
