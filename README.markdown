@@ -12,7 +12,7 @@ General information about developing and using Titanium modules is found in the 
 Usage
 -----
 
-Copy the module to the Titanium directory (e.g. /Library/Application Support/Titanium).
+Copy the module to your Titanium directory (e.g. /Library/Application Support/Titanium).
 
 Add the module to your projects `tiapp.xml`:
 
@@ -22,7 +22,7 @@ Add the module to your projects `tiapp.xml`:
 </modules>
 ```
 
-Load the module in your application's app.js:
+Load the module in your application's `app.js`:
 
 ```js
 KeyboardEvents = require("no.funkbit.keyboardevents");
