@@ -1,0 +1,11 @@
+version: 0.1
+description: Exposes useful keyboard events to apps.
+author: Funkbit AS
+license: See LICENSE
+copyright: Copyright (c) 2011 by Funkbit AS
+
+name: keyboardevents
+moduleid: no.funkbit.keyboardevents
+guid: 14dd4230-4054-4c33-a713-fd29bec30548
+platform: iphone
+minsdk: 1.7.3
