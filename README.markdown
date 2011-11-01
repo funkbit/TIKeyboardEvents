@@ -1,25 +1,21 @@
-KeyboardEvents Module for Appcelerator Titanium
-===============================================
+TiKeyboardEvents Module for Titanium
+=====================================
 
-Copyright 2011 Funkbit AS (http://funkbit.no).
+This module exposes some useful keyboard events available in iOS, used to notify the application when the keyboard is shown and hidden.
 
-The module exposes some useful keyboard events available in iOS, to notify the application
-when the keyboard is about to be shown and hidden.
-
-Information about the notifications can be found in the Apple iOS docs:
-http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWindow_Class/UIWindowClassReference/UIWindowClassReference.html
+Information about the keyboard notifications can be found in the [Apple UIKit documentation][appledocs].
 
 Currently, the two supported keyboard events are keyboardWillShow and keyboardWillHide, typically used to adjust the size of the current view
 depending on keyboard visibility.
 
-General information about Titanium modules can be found here:
-http://wiki.appcelerator.org/display/guides/iOS+Module+Development+Guide
+General information about Titanium modules can be found in the [Titanium docs][timoduledocs].
 
 Usage
 -----
 
-1. Copy the module to the Titanium directory (e.g. /Library/Application Support/Titanium).
-2. Add the module to your projects `tiapp.xml`:
+Copy the module to the Titanium directory (e.g. /Library/Application Support/Titanium).
+
+Add the module to your projects `tiapp.xml`:
 
 ```xml
 <modules>
@@ -27,13 +23,13 @@ Usage
 </modules>
 ```
 
-3. Load the module in your application's app.js:
+Load the module in your application's app.js:
 
 ```js
 KeyboardEvents = require("no.funkbit.keyboardevents");
 ```
 
-4. Bind to the events you are interested in:
+Bind to the events you are interested in:
 
 ```js
 KeyboardEvents.addEventListener("keyboardWillShow", function() {
@@ -48,10 +44,13 @@ KeyboardEvents.addEventListener("keyboardWillShow", function() {
 Building
 --------
 
-1. Open the Xcode project and build it as normal.
-2. Execute `build.py` to package the module.
+1. Open the Xcode project, make changes and build as normal.
+2. Execute `./build.py` to package the module as an archive.
 3. Copy the archive to the Titanium directory to make it available:
 
 ```sh
 cp no.funkbit.keyboardevents-iphone-0.1.zip /Library/Application\ Support/Titanium/
 ```
+
+[appledocs]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIWindow_Class/UIWindowClassReference/UIWindowClassReference.html
+[timoduledocs]: http://wiki.appcelerator.org/display/guides/iOS+Module+Development+Guide
