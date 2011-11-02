@@ -12,7 +12,7 @@ General information about developing and using Titanium modules is found in the 
 Building
 --------
 
-1. Open the Xcode project, make changes and build as normal.
+1. Open the Xcode project and build as normal.
 2. Execute `./build.py` to package the module as an archive.
 3. Copy the archive to the Titanium directory to make it available:
 
